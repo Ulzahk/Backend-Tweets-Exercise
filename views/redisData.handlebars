@@ -1,0 +1,23 @@
+<section class="results-section">
+    <div class="subject-division">
+        <h2 class="subject-text">Tweets on Redis</h2>
+        <p class="total-tweets">Total Storaged: {{totalTweets}}</p>
+    </div>
+    <div class="tweets-found-division">
+        {{#each data}}
+            {{#each this.statuses}}
+                <div class="card">
+                    <div class="user-image">
+                        <img src="{{this.user.profile_image_url}}" alt="">
+                        <p class="username">{{this.user.name}}</p>
+                        <p class="screen-name" >@{{this.user.screen_name}}</p>
+                    </div>
+                    <div class="tweet-details">
+                        <p class="date">{{this.created_at}}</p>
+                        <p>{{this.text}}</p>
+                    </div>
+                </div>
+            {{/each}}
+        {{/each}}
+    </div>
+</section>

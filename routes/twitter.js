@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
     console.log(keyword)
     const options = {
         method: 'GET',
-        url: `https://api.twitter.com/1.1/search/tweets.json?q=${keyword}&count=50`,
+        url: `https://api.twitter.com/1.1/search/tweets.json?q=${keyword}&count=1`,
         headers: {
             'Authorization': `Bearer ${config.twitterToken}`
         }

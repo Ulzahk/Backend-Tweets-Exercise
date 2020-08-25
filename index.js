@@ -6,6 +6,7 @@ const debug = require('debug')("app:server")
 const handlebars = require('express-handlebars')
 const routeHome = require('./routes/home')
 const routeResults = require('./routes/results')
+const routeRedisData = require('./routes/redisData')
 const routeTwitter = require('./routes/twitter')
 const app = express()
 
@@ -32,6 +33,7 @@ app.get('/', function(req, res){
 
 app.use('/home', routeHome)
 app.use('/results', routeResults)
+app.use('/redisData', routeRedisData)
 app.use('/twitter', routeTwitter)
 
 

@@ -6,6 +6,7 @@
   "scripts": {
     "start": "set NODE_ENV=production && node index.js",
     "start-dev": "set DEBUG=app:* && set NODE_ENV=development && nodemon index.js",
+    "start-receiver": "node routes/receiver.js",
     "lint": "standard"
   },
   "repository": {
@@ -27,12 +28,13 @@
   },
   "homepage": "https://github.com/Ulzahk/Backend-Tweets-Exercise#readme",
   "dependencies": {
+    "amqplib": "^0.6.0",
     "debug": "^4.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
-    "request": "^2.88.2",
-    "vercel": "^19.2.0"
+    "redis": "^3.0.2",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.4",

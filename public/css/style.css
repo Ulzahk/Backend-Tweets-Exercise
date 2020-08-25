@@ -43,6 +43,43 @@ body {
     font-size: 1.5rem;
 }
 
+.header-section nav .logo-division a:hover{
+    opacity: 0.75;
+}
+
+.header-section nav .redis-division{
+    width: 20%;
+    padding-right: 2%;
+    text-decoration: none;
+}
+
+.header-section nav .redis-division .redis-text{
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-section nav .redis-division .redis-text:hover{
+    opacity: 0.75;
+}
+
+
+
+.header-section nav .redis-division .redis-text p{
+    margin: 0;
+}
+
+.header-section nav .redis-division .redis-text .redis-image{
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+}
+
 /* home */
 
 .home-section {
@@ -129,7 +166,7 @@ body {
 /* results */
 
 .results-section{
-    height: auto;
+    min-height: 71.5%;
     width: 100%;
     padding-bottom: 30px;
 }
