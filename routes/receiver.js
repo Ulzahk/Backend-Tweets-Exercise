@@ -26,6 +26,8 @@ amqp.connect('amqp://localhost', function(error0, connection) {
             let stringMsg = msg.content.toString()
             
             console.log('\n')
+
+            /* client.del('list:tweets') */
             client.lpush('list:tweets', stringMsg, redis.print )
             
         }, {

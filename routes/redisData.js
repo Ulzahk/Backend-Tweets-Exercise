@@ -17,7 +17,20 @@ router.get('/', async (req, res, next) =>{
     } catch (error) {
         next(error)
     }
-} )
+})
+
+
+router.get('/deleteData', async (req, res, next) =>{
+    try {
+        client.del('list:tweets', async function (err, key){
+            res.redirect('/redisData')
+        })   
+    } catch (error) {
+        next(error)
+    }
+})
+
+
 
 
 module.exports = router;

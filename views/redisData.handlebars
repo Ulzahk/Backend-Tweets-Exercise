@@ -1,8 +1,18 @@
 <section class="results-section">
     <div class="subject-division">
-        <h2 class="subject-text">Tweets on Redis</h2>
-        <p class="total-tweets">Total Storaged: {{totalTweets}}</p>
+        <h2 class="subject-text">Tweets Storaged on Redis</h2>
+        <a class="total-tweets" href="/redisData/deleteData">
+        {{#if data}}
+            Do You Want to Delete These Tweets? Click Here
+        {{/if}}
+        </a>
     </div>
+    {{#if data}}
+    {{else}}
+    <div class="tweets-found-division">
+        <p class="total-tweets">There aren't tweets storaged</p>
+    </div>
+    {{/if}}
     <div class="tweets-found-division">
         {{#each data}}
             {{#each this.statuses}}

@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
         keyword = keyword.toLocaleLowerCase().trim().replace(/\s+/g, '%20')
         const options = {
             method: 'GET',
-            url: `https://api.twitter.com/1.1/search/tweets.json?q=${keyword}&count=1`,
+            url: `https://api.twitter.com/1.1/search/tweets.json?q=${keyword}&count=50`,
             headers: {
                 'Authorization': `Bearer ${config.twitterToken}`
             }

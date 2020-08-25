@@ -8,7 +8,6 @@ const request = require('request')
 router.get('/', (req, res, next) => {
     let keyword = req.query.keyword
     keyword = keyword.toLocaleLowerCase().trim().replace(/\s+/g, '%20')
-    console.log(keyword)
     const options = {
         method: 'GET',
         url: `https://api.twitter.com/1.1/search/tweets.json?q=${keyword}&count=1`,
