@@ -1,0 +1,49 @@
+{
+  "name": "backend-tweets-exercise",
+  "version": "1.0.0",
+  "description": "An application that will listen to tweets and track certain keywords and those tweets will be available through an API.",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=production && node index.js",
+    "start-dev": "set DEBUG=app:* && set NODE_ENV=development && nodemon index.js",
+    "start-receiver": "node routes/receiver.js",
+    "cypress-open": "cypress open --project ./test",
+    "test:dev": "set NODE_ENV=development && node index.js && cypress-open",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ulzahk/Backend-Tweets-Exercise.git"
+  },
+  "keywords": [
+    "RabbitMQ",
+    "Redis",
+    "GraphQL",
+    "Testing",
+    "API",
+    "REST"
+  ],
+  "author": "Francisco Suarez <ulzahk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ulzahk/Backend-Tweets-Exercise/issues"
+  },
+  "homepage": "https://github.com/Ulzahk/Backend-Tweets-Exercise#readme",
+  "dependencies": {
+    "amqplib": "^0.6.0",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "express-handlebars": "^5.1.0",
+    "graphql": "^15.3.0",
+    "graphql-tools": "^6.0.18",
+    "redis": "^3.0.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "cypress": "^5.0.0",
+    "nodemon": "^2.0.4",
+    "standard": "^14.3.4"
+  }
+}

@@ -1,0 +1,33 @@
+<section class="results-section">
+    <div class="subject-division">
+        <h2 class="subject-text">Tweets Storaged on Redis</h2>
+        <a class="total-tweets" href="/redisData/deleteData">
+        {{#if data}}
+            Do You Want to Delete These Tweets? Click Here
+        {{/if}}
+        </a>
+    </div>
+    {{#if data}}
+    {{else}}
+    <div class="tweets-found-division">
+        <p class="total-tweets">There aren't tweets storaged</p>
+    </div>
+    {{/if}}
+    <div class="tweets-found-division">
+        {{#each data}}
+            {{#each this.statuses}}
+                <div class="card">
+                    <div class="user-image">
+                        <img src="{{this.user.profile_image_url}}" alt="">
+                        <p class="username">{{this.user.name}}</p>
+                        <p class="screen-name" >@{{this.user.screen_name}}</p>
+                    </div>
+                    <div class="tweet-details">
+                        <p class="date">{{this.created_at}}</p>
+                        <p>{{this.text}}</p>
+                    </div>
+                </div>
+            {{/each}}
+        {{/each}}
+    </div>
+</section>

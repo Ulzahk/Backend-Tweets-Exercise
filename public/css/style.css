@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* navbar */
+.header-section {
+    width: auto;
+    height: 75px;
+    background-image: linear-gradient(to right, #232526, #2a2c2d, #323435, #393b3d, #414345);
+}
+
+.header-section nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-section nav .logo-division{
+    padding-left: 2%;
+    text-decoration: none;
+}
+
+.header-section nav .logo-division a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.header-section nav .logo-division a:hover{
+    opacity: 0.75;
+}
+
+.header-section nav .redis-division{
+    width: 20%;
+    padding-right: 2%;
+    text-decoration: none;
+}
+
+.header-section nav .redis-division .redis-text{
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-section nav .redis-division .redis-text:hover{
+    opacity: 0.75;
+}
+
+
+
+.header-section nav .redis-division .redis-text p{
+    margin: 0;
+}
+
+.header-section nav .redis-division .redis-text .redis-image{
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+}
+
+/* home */
+
+.home-section {
+    min-height: 76%;
+    width: 100%;
+    background-color:white;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+.home-section .subject-division{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+}
+
+.home-section .search-bar-division {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-section .search-bar-division form .search-bar {
+    background-color: white;
+    width: 600px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 30px;
+    border: 1px solid #dfe1e5;
+}
+
+.home-section .search-bar-division form .search-bar:hover{
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
+
+.home-section .search-bar-division form .search-bar .twitter-logo {
+    color: #1DA1F2;
+    padding-left: 15px;
+}
+
+.home-section .search-bar-division form .search-bar .search-input {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    margin: 0 15px;
+    border: none;
+}
+
+.home-section .search-bar-division form .search-bar .search-input[type=text] {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* It allows to have an autocompleted input with white background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.home-section .search-bar-division form .search-bar .search-input:focus{
+    outline: none;
+}
+
+.home-section .search-bar-division form .search-bar .submit-button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #9aa0a6;
+    font-size: 30px;
+    padding-right: 15px ;
+}
+
+.home-section .search-bar-division form .search-bar .submit-button:hover{
+    outline: none;
+    color: #5e6368;
+    cursor: pointer;
+}
+
+.home-section .search-bar-division form .search-bar .submit-button:focus{
+    outline: none;
+}
+
+
+/* results */
+
+.results-section{
+    min-height: 71.5%;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.results-section .subject-division{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+}
+
+.results-section .subject-division .subject-text{
+    margin-bottom: 0;
+}
+
+.results-section .subject-division .total-tweets{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.results-section .tweets-found-division {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    justify-items: center;
+}
+
+
+.results-section  .tweets-found-division .card{
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.results-section  .tweets-found-division .card .user-image{
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.results-section  .tweets-found-division .card .user-image p{
+    margin: 0;
+    text-align: center;
+}
+
+.results-section  .tweets-found-division .card .user-image .username{
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.results-section  .tweets-found-division .card .user-image .screen-name{
+    color: #9aa0a6;
+}
+
+
+.results-section  .tweets-found-division .card .user-image img{
+    border-radius: 25px;
+}
+
+.results-section  .tweets-found-division .card .tweet-details{
+    padding: 10px;
+}
+
+.results-section  .tweets-found-division .card .tweet-details .date{
+    font-weight: bold;
+} 
+
+/* footer */
+.footer-section {
+    width: 100%;
+    height: 75px;
+    background-color: #232526;
+}
+
+.footer-section .credits-division{
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer-section .credits-division p a {
+    color: white
+}
+
+.footer-section .credits-division p a:hover{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 650px){
+
+    .header-section nav .redis-division{
+        padding-right: 2%;
+    }
+
+    .header-section nav .redis-division .redis-text p{
+        display: none;
+    }
+
+    .home-section .search-bar-division form .search-bar{
+        width: 100%;
+    }
+
+    .results-section  .tweets-found-division .card{
+        grid-template-columns: 35% 65%;
+    }
+}
