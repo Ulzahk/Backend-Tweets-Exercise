@@ -96,6 +96,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    text-align: center;
 }
 
 .home-section .search-bar-division {
@@ -185,6 +186,7 @@ input:-webkit-autofill:active  {
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    text-align: center;
 }
 
 .results-section .subject-division .subject-text{
@@ -208,7 +210,7 @@ input:-webkit-autofill:active  {
 
 
 .results-section  .tweets-found-division .card{
-    width: 800px;
+    width: 90%;
     border: 1px solid black;
     border-radius: 5px;
     display: grid;
@@ -275,4 +277,23 @@ input:-webkit-autofill:active  {
 
 .footer-section .credits-division p a:hover{
     text-decoration: none;
+}
+
+@media screen and (max-width: 650px){
+
+    .header-section nav .redis-division{
+        padding-right: 2%;
+    }
+
+    .header-section nav .redis-division .redis-text p{
+        display: none;
+    }
+
+    .home-section .search-bar-division form .search-bar{
+        width: 100%;
+    }
+
+    .results-section  .tweets-found-division .card{
+        grid-template-columns: 35% 65%;
+    }
 }

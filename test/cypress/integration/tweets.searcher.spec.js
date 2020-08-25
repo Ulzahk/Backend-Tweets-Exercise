@@ -4,6 +4,7 @@ const { isType } = require("graphql")
 
 describe('Tweets searcher tests', () => {
     beforeEach( () => {
+        cy.visit('/redisData/deleteData')
         cy.visit('/home')
     })
     it('Should shows home page', () => {
@@ -27,6 +28,13 @@ describe('Tweets searcher tests', () => {
         cy.get('.submit-button').click()
         cy.wait(1500)
         cy.get(':nth-child(50)').should('be.visible')
+    })
+
+    it('Should save tweets when the search is made with platzi keyword', () =>{
+        cy.get('#keyword').type('platzi')
+        cy.get('.submit-button').click()
+        cy.get('.redis-text').click()
+        cy.get('.tweet-details').should('be.visible')
     })
     
 })
